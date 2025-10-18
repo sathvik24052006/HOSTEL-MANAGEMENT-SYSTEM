@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complaints - Hostel Management System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .back {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #4CAF50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #f9f9f9;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏨 Hostel Booking Management System</h1>
+  </header>
+
+  <div class="container">
+    <h2>Submit a Complaint</h2>
+
+    <form action="compliants.php" method="POST">
+      <div>
+        <label for="studentid">Student ID:</label>
+        <input type="number" name="studentid" id="studentid" required>
+      </div>
+
+      <div>
+        <label for="complaint">Complaint:</label>
+        <textarea name="complaint" id="complaint" required></textarea>
+      </div>
+
+      <div>
+        <label for="cdate">Date:</label>
+        <input type="date" name="cdate" id="cdate" required>
+      </div>
+
+      <input type="submit" value="Submit Complaint">
+    </form>
+
+    <a href="index.html" class="back">← Back to Dashboard</a>
+  </div>
+
+  
+
+</body>
+</html>
